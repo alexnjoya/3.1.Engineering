@@ -71,7 +71,7 @@ export function Navigation() {
               priority
             />
             <span className="company-name text-base font-semibold uppercase leading-none -ml-8">
-              3.1st Engineering LTD
+              3.1st Engineering <span className="text-red-600">LTD</span>
             </span>
           </Link>
           

@@ -19,7 +19,7 @@ export function Footer() {
                 className="h-12 w-auto -mr-4"
               />
               <span className="text-base font-semibold text-white uppercase leading-none -ml-4">
-                3.1st Engineering LTD
+                3.1st Engineering <span className="text-red-600">LTD</span>
               </span>
             </Link>
             <p className="text-sm text-white/70 mb-6 leading-relaxed">
