@@ -101,13 +101,13 @@ export const ServicesSection = memo(function ServicesSection() {
                 className="flex-shrink-0 group relative"
               >
                 {/* Spherical Card */}
-                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[var(--accent-green)]/50 hover:shadow-2xl hover:shadow-[var(--accent-green)]/20 transition-all duration-300 flex flex-col items-center justify-center p-2 sm:p-2.5 md:p-3 hover:scale-105">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[var(--accent-green)]/50 hover:shadow-2xl hover:shadow-[var(--accent-green)]/20 transition-all duration-300 flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-2.5 hover:scale-105">
                   <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[var(--accent-green)]/10 rounded-full flex items-center justify-center group-hover:bg-[var(--accent-green)]/20 transition-colors mb-1.5 sm:mb-2 p-1.5">
                     <div className="w-full h-full text-[var(--accent-green)]">
                       <sector.icon />
                     </div>
                   </div>
-                  <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-foreground group-hover:text-[var(--accent-green)] transition-colors text-center leading-tight px-0.5">
+                  <h3 className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm font-bold text-foreground group-hover:text-[var(--accent-green)] transition-colors text-center leading-[1.2] px-1 break-words overflow-hidden w-full" style={{ wordBreak: 'break-word', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', maxHeight: '2.4em' }}>
                     {sector.label}
                   </h3>
                 </div>
