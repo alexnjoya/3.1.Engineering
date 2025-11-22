@@ -119,7 +119,7 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
                     <div className="absolute inset-0 bg-[var(--accent-green)]/5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     {/* Title overlay - visible on mobile, hover on desktop */}
-                    <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 pb-3 md:pb-0 md:items-center">
+                    <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-blue-600/50 via-blue-500/35 to-blue-400/15 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 pb-3 md:pb-0 md:items-center">
                       <div className="text-center px-3 md:px-4">
                         <h3 className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl drop-shadow-lg">
                           {item.service.title}
@@ -140,17 +140,17 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
       {/* Image Modal for Mobile */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:hidden animate-fade-in"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 pt-16 pb-20 md:hidden animate-fade-in"
           onClick={() => setSelectedImage(null)}
         >
           <div 
-            className="relative w-full h-full max-w-2xl max-h-[90vh] flex flex-col animate-scale-in"
+            className="relative w-full h-full max-w-2xl flex flex-col animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+              className="absolute top-2 right-2 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
               aria-label="Close"
             >
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,12 +159,13 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
             </button>
 
             {/* Image Container */}
-            <div className="relative flex-1 rounded-lg overflow-hidden mb-4 bg-black/20">
+            <div className="relative flex-1 min-h-0 rounded-lg overflow-hidden mb-4 bg-black/20 flex items-center justify-center">
               <Image
                 src={selectedImage.image}
                 alt={`${selectedImage.title} project illustration`}
-                fill
-                className="object-contain"
+                width={800}
+                height={600}
+                className="object-contain w-auto h-auto max-w-full max-h-full"
                 sizes="100vw"
                 quality={90}
                 priority
@@ -172,7 +173,7 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
             </div>
 
             {/* Image Info */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 flex-shrink-0">
               <h3 className="text-white font-bold text-xl mb-2">
                 {selectedImage.title}
               </h3>
