@@ -1,12 +1,30 @@
 'use client'
 
 import Image from 'next/image'
-import { memo } from 'react'
+import { memo, useState, useEffect } from 'react'
 import { services } from '@/data/services'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export const PortfolioGridSection = memo(function PortfolioGridSection() {
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 })
+  const [selectedImage, setSelectedImage] = useState<{ title: string; image: string; description: string } | null>(null)
+
+  // Close modal on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null)
+      }
+    }
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'hidden'
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [selectedImage])
   // Portfolio grid layout - converted from services section
   // Layout: Left tall (1 col, rows 1-3) | Middle cards (col 2, rows 1-2) | Right cards (cols 3-4, rows 1-2)
   const gridLayout = [
@@ -82,7 +100,8 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
               item.service && (
                 <div 
                   key={index} 
-                  className={`bg-card border-2 border-border/60 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-[var(--accent-green)]/10 hover:border-[var(--accent-green)]/50 transition-all duration-300 hover:scale-[1.02] group relative h-full ${item.gridClass} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  onClick={() => setSelectedImage({ title: item.service.title, image: item.service.image, description: item.service.description })}
+                  className={`bg-card border-2 border-border/60 rounded-xl overflow-hidden hover:border-[var(--accent-green)]/50 transition-all duration-300 hover:scale-[1.02] group relative h-full cursor-pointer ${item.gridClass} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${index * 100}ms`, transitionDuration: '700ms', transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
                 >
                   <div className="relative bg-secondary overflow-hidden w-full h-full">
@@ -117,6 +136,56 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
           </div>
         </div>
       </div>
+
+      {/* Image Modal for Mobile */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:hidden animate-fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div 
+            className="relative w-full h-full max-w-2xl max-h-[90vh] flex flex-col animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative flex-1 rounded-lg overflow-hidden mb-4 bg-black/20">
+              <Image
+                src={selectedImage.image}
+                alt={`${selectedImage.title} project illustration`}
+                fill
+                className="object-contain"
+                sizes="100vw"
+                quality={90}
+                priority
+              />
+            </div>
+
+            {/* Image Info */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <h3 className="text-white font-bold text-xl mb-2">
+                {selectedImage.title}
+              </h3>
+              <p className="text-white/90 text-sm mb-2">
+                {selectedImage.title} project illustration
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                {selectedImage.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 })

@@ -47,7 +47,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-lg">
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden border border-[var(--border-color)]">
               <Image
                 src="/aboutImage.jpg"
                 alt="Construction company team and projects"
@@ -124,7 +124,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className={`relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-lg transition-all duration-700 ease-out ${historyRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className={`relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden border border-[var(--border-color)] transition-all duration-700 ease-out ${historyRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Image
                 src="/Transform Your Space with General Construction.jpg"
                 alt="Construction worker in interior renovation space"
@@ -268,7 +268,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`transition-all duration-700 ease-out ${chooseRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="relative rounded-xl overflow-hidden">
                 <Image
                   src="/Professional Installation You Can Rely On.jpg"
                   alt="Professional construction worker with spirit level at construction site"
