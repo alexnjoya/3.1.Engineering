@@ -55,11 +55,11 @@ export function Navigation() {
 
   return (
     <nav ref={navRef} className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
         <div className="flex items-center justify-between h-16">
           <Link 
             href="/" 
-            className="flex items-center group"
+            className="flex items-center group -ml-4 sm:-ml-6 lg:-ml-8 pl-0"
             onClick={closeMenu}
           >
             <Image

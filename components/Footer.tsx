@@ -6,11 +6,11 @@ import Image from 'next/image'
 export function Footer() {
   return (
     <footer className="border-t border-border/20 bg-[#121212] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center mb-4">
+            <Link href="/" className="inline-flex items-center mb-4 -ml-4 sm:-ml-6 lg:-ml-8 pl-0">
               <Image
                 src="/LOBO.png"
                 alt="3.1ST Engineering Logo"
@@ -137,10 +137,10 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="mailto:3.1stengineeringltd@gmail.com" 
+                  href="mailto:hello@31stengineering.co.uk" 
                   className="text-sm text-white/70 hover:text-[var(--accent-green)] transition-colors"
                 >
-                  3.1stengineeringltd@gmail.com
+                  hello@31stengineering.co.uk
                 </Link>
               </li>
               <li className="text-sm text-white/70">
@@ -148,10 +148,10 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="mailto:The.volcs1@outlook.com" 
+                  href="mailto:careers@31stengineering.co.uk" 
                   className="text-sm text-white/70 hover:text-[var(--accent-green)] transition-colors"
                 >
-                  Careers: The.volcs1@outlook.com
+                  Careers: careers@31stengineering.co.uk
                 </Link>
               </li>
             </ul>

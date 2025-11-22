@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { services, processSteps } from '@/data/services'
 import { Button } from '@/components/Button'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getYearsOfExperience } from '@/lib/utils'
 
 export default function ServicesPage() {
   const servicesRef = useScrollAnimation({ threshold: 0.15 })
@@ -143,7 +144,7 @@ export default function ServicesPage() {
 
               <div className="space-y-3 sm:space-y-4">
                 {[
-                  { icon: '✓', title: 'Expert Team', desc: 'Skilled professionals with 13+ years of combined experience' },
+                  { icon: '✓', title: 'Expert Team', desc: `Skilled professionals with ${getYearsOfExperience()} years of combined experience` },
                   { icon: '✓', title: 'Quality Assurance', desc: 'Rigorous quality checks ensuring highest standards' },
                   { icon: '✓', title: 'Timely Delivery', desc: 'Projects completed on schedule with proven track record' },
                   { icon: '✓', title: 'Competitive Pricing', desc: 'Transparent pricing with no hidden costs' },
@@ -174,7 +175,7 @@ export default function ServicesPage() {
                   )
                 },
                 { 
-                  number: '13+', 
+                  number: getYearsOfExperience(), 
                   label: 'Years Experience', 
                   icon: (
                     <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--accent-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

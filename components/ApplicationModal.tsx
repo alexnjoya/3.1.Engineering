@@ -209,8 +209,8 @@ export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
             </h2>
             <p id="modal-description" className="text-xs text-foreground/60">
               Fill out the form below or email your resume directly to{' '}
-              <Link href="mailto:The.volcs1@outlook.com" className="text-[var(--accent-green)] hover:underline font-medium">
-                The.volcs1@outlook.com
+              <Link href="mailto:careers@31stengineering.co.uk" className="text-[var(--accent-green)] hover:underline font-medium">
+                careers@31stengineering.co.uk
               </Link>
             </p>
           </div>

@@ -122,10 +122,10 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold mb-1 text-foreground">Email</h4>
                   <Link
-                    href="mailto:3.1stengineeringltd@gmail.com"
+                    href="mailto:hello@31stengineering.co.uk"
                     className="text-[var(--accent-green)] hover:underline transition-colors break-all"
                   >
-                    3.1stengineeringltd@gmail.com
+                    hello@31stengineering.co.uk
                   </Link>
                 </div>
               </div>
@@ -139,10 +139,10 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold mb-1 text-foreground">Careers</h4>
                   <Link
-                    href="mailto:The.volcs1@outlook.com"
+                    href="mailto:careers@31stengineering.co.uk"
                     className="text-[var(--accent-green)] hover:underline transition-colors"
                   >
-                    The.volcs1@outlook.com
+                    careers@31stengineering.co.uk
                   </Link>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { memo } from 'react'
 import { Button } from '@/components/Button'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getYearsOfExperience, getYearsSinceFounded } from '@/lib/utils'
 
 export const AboutSection = memo(function AboutSection() {
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.2 })
@@ -34,7 +35,7 @@ export const AboutSection = memo(function AboutSection() {
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white mb-1 sm:mb-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-none mb-0.5 sm:mb-1">25+</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-none mb-0.5 sm:mb-1">{getYearsOfExperience()}</div>
                   <div className="text-[8px] sm:text-[9px] lg:text-[10px] text-white/90 font-medium leading-tight px-1 sm:px-2">Years of<br />Experience</div>
                 </div>
               </div>
@@ -53,7 +54,7 @@ export const AboutSection = memo(function AboutSection() {
 
             {/* Description Paragraph */}
             <p className="text-foreground/80 text-lg leading-relaxed">
-              With over 25 years of experience in the construction industry, we have built a reputation for delivering exceptional quality and innovative solutions. Our team of skilled professionals brings expertise and dedication to every project.
+              With over {getYearsSinceFounded()} years of experience in the construction industry, we have built a reputation for delivering exceptional quality and innovative solutions. Our team of skilled professionals brings expertise and dedication to every project.
             </p>
 
             {/* Stats Grid */}

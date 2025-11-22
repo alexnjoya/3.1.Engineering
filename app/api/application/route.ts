@@ -293,7 +293,7 @@ export async function POST(request: NextRequest) {
                           Reply directly to this email to respond to <strong style="color: #1f2937;">${sanitizedName}</strong>.
                         </p>
                         <p style="margin: 15px 0 0 0; color: #9ca3af; font-size: 11px;">
-                          Careers Email: The.volcs1@outlook.com
+                          Careers Email: careers@31stengineering.co.uk
                         </p>
                       </div>
                     </td>
@@ -323,7 +323,7 @@ ${sanitizedMessage ? `\nCover Letter / Additional Information:\n${sanitizedMessa
 This email was sent from the job application form on your website.
 Reply directly to this email to respond to ${sanitizedName}.
 
-Careers Email: The.volcs1@outlook.com
+Careers Email: careers@31stengineering.co.uk
       `,
       attachments: attachments.length > 0 ? attachments : undefined,
     })

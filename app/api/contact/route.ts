@@ -234,7 +234,7 @@ export async function POST(request: NextRequest) {
                           Reply directly to this email to respond to <strong style="color: #1f2937;">${sanitizedName}</strong>.
                         </p>
                         <p style="margin: 15px 0 0 0; color: #9ca3af; font-size: 11px;">
-                          Phone: 07300805194 | Email: 3.1stengineeringltd@gmail.com
+                          Phone: 07300805194 | Email: hello@31stengineering.co.uk
                         </p>
                       </div>
                     </td>
@@ -265,7 +265,7 @@ Reply directly to this email to respond to ${sanitizedName}.
 
 Company Contact:
 Phone: 07300805194
-Email: 3.1stengineeringltd@gmail.com
+Email: hello@31stengineering.co.uk
       `,
     })
 

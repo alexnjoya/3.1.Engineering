@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getYearsOfExperience } from '@/lib/utils'
 
 export default function AboutPage() {
   const missionRef = useScrollAnimation({ threshold: 0.2 })
@@ -36,7 +37,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm">
                 <div className="bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl p-3 sm:p-4 hover:border-[var(--accent-green)]/50 hover:shadow-lg transition-all text-center flex flex-col items-center justify-center group">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--accent-green)] mb-1">13+</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--accent-green)] mb-1">{getYearsOfExperience()}</div>
                   <div className="text-[10px] sm:text-xs font-medium text-foreground/70 leading-tight">Years Experience</div>
                 </div>
                 <div className="bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl p-3 sm:p-4 hover:border-[var(--accent-green)]/50 hover:shadow-lg transition-all text-center flex flex-col items-center justify-center group">
@@ -299,7 +300,7 @@ export default function AboutPage() {
 
                 <div className="space-y-4">
                   {[
-                    'Expert team with 13+ years of combined experience',
+                    `Expert team with ${getYearsOfExperience()} years of combined experience`,
                     'Proven track record of 500+ successful projects',
                     'Commitment to quality and timely delivery',
                     'Innovative solutions and modern construction techniques',

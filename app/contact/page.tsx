@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Notification } from '@/components/Notification'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getYearsOfExperience } from '@/lib/utils'
 
 export default function ContactPage() {
   const contactMethodsRef = useScrollAnimation({ threshold: 0.15 })
@@ -101,8 +102,8 @@ export default function ContactPage() {
         </svg>
       ),
       title: 'Email',
-      value: '3.1stengineeringltd@gmail.com',
-      link: 'mailto:3.1stengineeringltd@gmail.com',
+      value: 'hello@31stengineering.co.uk',
+      link: 'mailto:hello@31stengineering.co.uk',
       description: 'Send us an email anytime',
     },
     {
@@ -346,13 +347,13 @@ export default function ContactPage() {
                   We're always looking for talented construction professionals. Send your resume to:
                 </p>
                 <Link
-                  href="mailto:The.volcs1@outlook.com"
+                  href="mailto:careers@31stengineering.co.uk"
                   className="inline-flex items-center gap-2 text-[var(--accent-green)] hover:text-[var(--accent-green-hover)] font-semibold transition-colors group"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span>The.volcs1@outlook.com</span>
+                  <span>careers@31stengineering.co.uk</span>
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -377,7 +378,7 @@ export default function ContactPage() {
             {[
               {
                 icon: '✓',
-                title: '13+ Years Experience',
+                title: `${getYearsOfExperience()} Years Experience`,
                 description: 'Proven track record in construction excellence',
               },
               {
