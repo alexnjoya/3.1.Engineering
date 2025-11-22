@@ -361,3 +361,12 @@ button {
 .dark .icon-theme {
   filter: brightness(0) invert(1);
 }
+
+/* Company name in navigation - force black in light mode */
+.company-name {
+  color: #000000 !important;
+}
+
+.dark .company-name {
+  color: #FFFFFF !important;
+}

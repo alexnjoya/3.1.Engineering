@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5,
   },
+  icons: {
+    icon: "/LOBO.png",
+    shortcut: "/LOBO.png",
+    apple: "/LOBO.png",
+  },
 };
 
 export default function RootLayout({

@@ -65,12 +65,12 @@ export function Navigation() {
             <Image
               src="/LOBO.png"
               alt="3.1ST Engineering Logo"
-              width={150}
-              height={50}
-              className="h-12 w-auto transition-all group-hover:scale-105 -mr-4"
+              width={200}
+              height={67}
+              className="h-16 w-auto transition-all group-hover:scale-105 -mr-8"
               priority
             />
-            <span className="text-base font-semibold text-black dark:text-white uppercase leading-none -ml-4">
+            <span className="company-name text-base font-semibold uppercase leading-none -ml-8">
               3.1st Engineering LTD
             </span>
           </Link>
