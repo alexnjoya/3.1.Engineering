@@ -55,7 +55,7 @@ export default function AboutPage() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 priority
-                quality={80}
+                quality={70}
               />
             </div>
           </div>
@@ -85,8 +85,8 @@ export default function AboutPage() {
                     width={32}
                     height={32}
                     className="w-full h-full object-contain icon-theme"
-                    quality={75}
-                    loading="lazy"
+                    quality={70}
+                    loading="eager"
                   />
                 </div>
                 <h3 className="text-3xl lg:text-4xl font-bold text-foreground">Our Mission</h3>
@@ -105,8 +105,8 @@ export default function AboutPage() {
                     width={32}
                     height={32}
                     className="w-full h-full object-contain icon-theme"
-                    quality={75}
-                    loading="lazy"
+                    quality={70}
+                    loading="eager"
                   />
                 </div>
                 <h3 className="text-3xl lg:text-4xl font-bold text-foreground">Our Vision</h3>
@@ -131,8 +131,8 @@ export default function AboutPage() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={75}
-                loading="lazy"
+                quality={70}
+                loading="eager"
               />
             </div>
 
@@ -275,8 +275,8 @@ export default function AboutPage() {
                   width={800}
                   height={600}
                   className="w-full h-full object-cover"
-                  quality={75}
-                  loading="lazy"
+                  quality={70}
+                  loading="eager"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

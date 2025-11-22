@@ -18,15 +18,15 @@ export default function ServicesPage() {
       <section className="relative py-12 lg:py-16 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/heroimagservice.jpg"
-            alt="Construction site background"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-            quality={80}
-          />
+            <Image
+              src="/heroimagservice.jpg"
+              alt="Construction site background"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+              quality={70}
+            />
           {/* Overlay for text readability - no overlay for light mode, darker for dark mode */}
           <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-background/90 dark:via-background/80 dark:to-background/70"></div>
         </div>
@@ -101,8 +101,8 @@ export default function ServicesPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={75}
-                    loading="lazy"
+                    quality={70}
+                    loading="eager"
                   />
                 </div>
 
@@ -247,8 +247,8 @@ export default function ServicesPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={75}
-                    loading="lazy"
+                    quality={70}
+                    loading="eager"
                   />
                 </div>
                 

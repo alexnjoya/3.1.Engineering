@@ -43,8 +43,8 @@ export const ServicesSection = memo(function ServicesSection() {
                     alt={`${step.title} process step illustration`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={90}
-                    loading="lazy"
+                    quality={70}
+                    loading="eager"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

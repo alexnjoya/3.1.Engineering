@@ -92,7 +92,7 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       quality={70}
-                      loading="lazy"
+                      loading="eager"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       style={item.service.title === 'Ground Work' ? { objectPosition: 'center top' } : {}}
                     />

@@ -132,7 +132,7 @@ export default function ContactPage() {
             className="object-cover"
             sizes="100vw"
             priority
-            quality={80}
+            quality={70}
           />
           {/* Overlay for text readability - no overlay for light mode, darker for dark mode */}
           <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-background/90 dark:via-background/80 dark:to-background/70"></div>

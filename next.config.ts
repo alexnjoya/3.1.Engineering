@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [],
     unoptimized: false,
+    // Faster image loading
+    loader: 'default',
+    // Reduce image quality slightly for faster loading (can be adjusted)
+    // Quality is set per image, but default is 75
   },
   compress: true,
   poweredByHeader: false,

@@ -26,7 +26,7 @@ export function AnimatedHero() {
               className="object-contain"
               style={{ objectPosition: '85% top', transform: 'scale(1.1)' }}
               priority
-              quality={80}
+              quality={70}
               sizes="(max-width: 1536px) 100vw, 1536px"
             />
           </div>
