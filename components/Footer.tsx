@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -9,23 +10,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <div 
-                className="relative text-2xl font-extrabold transition-all inline-flex items-center tracking-tighter"
-                style={{ 
-                  fontFamily: 'var(--font-jetbrains-mono), "Fira Code", "Consolas", "Monaco", monospace',
-                  letterSpacing: '-0.05em'
-                }}
-              >
-                <span className="text-white relative z-10">3.1ST</span>
-                <span 
-                  className="text-[#3b82f6] relative -ml-1"
-                  style={{ transform: 'translateX(-2px) scaleX(0.95)' }}
-                >
-                  Engineering
-                </span>
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#3b82f6]/40 to-transparent -rotate-1"></span>
-              </div>
+            <Link href="/" className="inline-flex items-center mb-4">
+              <Image
+                src="/LOBO.png"
+                alt="3.1ST Engineering Logo"
+                width={150}
+                height={50}
+                className="h-12 w-auto -mr-4"
+              />
+              <span className="text-base font-semibold text-white uppercase leading-none -ml-4">
+                3.1st Engineering LTD
+              </span>
             </Link>
             <p className="text-sm text-white/70 mb-6 leading-relaxed">
               Well driven Artisans, full of resilience to get the job done competently. Providing quality and efficiency is our hallmark!

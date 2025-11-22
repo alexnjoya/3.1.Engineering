@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -61,22 +62,17 @@ export function Navigation() {
             className="flex items-center group"
             onClick={closeMenu}
           >
-            <div 
-              className="relative text-2xl font-extrabold transition-all group-hover:scale-105 inline-flex items-center tracking-tighter"
-              style={{ 
-                fontFamily: 'var(--font-jetbrains-mono), "Fira Code", "Consolas", "Monaco", monospace',
-                letterSpacing: '-0.05em'
-              }}
-            >
-              <span className="text-foreground relative z-10">3.1ST</span>
-              <span 
-                className="text-[#2563eb] dark:text-[#3b82f6] relative -ml-1"
-                style={{ transform: 'translateX(-2px) scaleX(0.95)' }}
-              >
-                Engineering
-              </span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#2563eb]/40 dark:via-[#3b82f6]/40 to-transparent -rotate-1"></span>
-            </div>
+            <Image
+              src="/LOBO.png"
+              alt="3.1ST Engineering Logo"
+              width={150}
+              height={50}
+              className="h-12 w-auto transition-all group-hover:scale-105 -mr-4"
+              priority
+            />
+            <span className="text-base font-semibold text-black dark:text-white uppercase leading-none -ml-4">
+              3.1st Engineering LTD
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
