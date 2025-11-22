@@ -183,6 +183,25 @@ button {
   animation-play-state: paused;
 }
 
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scrollRight 20s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.animate-scroll-right:hover {
+  animation-play-state: paused;
+}
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);

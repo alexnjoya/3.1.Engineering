@@ -97,7 +97,19 @@ export const PortfolioGridSection = memo(function PortfolioGridSection() {
                       style={item.service.title === 'Ground Work' ? { objectPosition: 'center top' } : {}}
                     />
                     {/* Hover effect overlay */}
-                    <div className="absolute inset-0 bg-[var(--accent-green)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-[var(--accent-green)]/5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    {/* Title overlay - visible on mobile, hover on desktop */}
+                    <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 pb-3 md:pb-0 md:items-center">
+                      <div className="text-center px-3 md:px-4">
+                        <h3 className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl drop-shadow-lg">
+                          {item.service.title}
+                        </h3>
+                        <p className="text-white/90 text-[10px] sm:text-xs md:text-sm mt-0.5 md:mt-1 drop-shadow-md hidden md:block">
+                          {item.service.title} project illustration
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )
