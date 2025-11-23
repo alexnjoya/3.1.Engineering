@@ -6,7 +6,7 @@ export function AIChat() {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState('')
 
-  const phoneNumber = '07300805194' // Replace with your WhatsApp number (include country code without +)
+  const phoneNumber = '447300805194' // UK WhatsApp number (country code 44 + 7300805194)
   
   const handleSend = () => {
     if (!message.trim()) return

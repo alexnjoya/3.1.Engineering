@@ -6,23 +6,23 @@ import Image from 'next/image'
 export function Footer() {
   return (
     <footer className="border-t border-border/20 bg-[#121212] text-white">
-      <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8 py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center mb-4 -ml-4 sm:-ml-6 lg:-ml-8 pl-0">
+            <Link href="/" className="flex items-center mb-4 group">
               <Image
                 src="/LOBO.png"
                 alt="3.1ST Engineering Logo"
                 width={150}
                 height={50}
-                className="h-12 w-auto -mr-4"
+                className="h-12 w-auto -mr-4 sm:-mr-6 transition-all group-hover:scale-105"
               />
-              <span className="text-base font-semibold text-white uppercase leading-none -ml-4">
+              <span className="text-sm sm:text-base font-semibold text-white uppercase leading-none -ml-4 sm:-ml-6 whitespace-nowrap">
                 3.1st Engineering <span className="text-red-600">LTD</span>
               </span>
             </Link>
-            <p className="text-sm text-white/70 mb-6 leading-relaxed">
+            <p className="text-sm text-white/70 mb-6 leading-relaxed max-w-sm">
               Well driven Artisans, full of resilience to get the job done competently. Providing quality and efficiency is our hallmark!
             </p>
             <div className="flex gap-4">
@@ -123,11 +123,6 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="text-sm text-white/70 hover:text-[var(--accent-green)] transition-colors">
-                  Blog
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -143,8 +138,15 @@ export function Footer() {
                   hello@31stengineering.co.uk
                 </Link>
               </li>
-              <li className="text-sm text-white/70">
-                07300805194
+              <li>
+                <Link 
+                  href="https://wa.me/447300805194" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/70 hover:text-[var(--accent-green)] transition-colors"
+                >
+                  07300805194
+                </Link>
               </li>
               <li>
                 <Link 
@@ -160,11 +162,11 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <p className="text-sm text-white/70">
               &copy; {new Date().getFullYear()} 3.1ST Engineering Ltd. All rights reserved.
             </p>
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="flex flex-wrap gap-4 md:gap-6 text-sm justify-center md:justify-end">
               <Link href="/privacy" className="text-white/70 hover:text-[var(--accent-green)] transition-colors">
                 Privacy Policy
               </Link>
