@@ -65,14 +65,6 @@ const StarRating = ({ rating }: { rating: number }) => {
 export function Testimonials() {
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.15 })
   
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase()
-      .substring(0, 2)
-  }
 
   // Duplicate testimonials for seamless infinite scroll
   const duplicatedTestimonials = [...testimonials, ...testimonials]
@@ -108,16 +100,11 @@ export function Testimonials() {
                 </blockquote>
 
                 {/* Author */}
-                <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-[var(--border-color)]">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[var(--accent-green)] to-[var(--accent-green)]/70 flex items-center justify-center text-white font-semibold text-xs sm:text-sm flex-shrink-0">
-                    {getInitials(testimonial.name)}
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-bold text-foreground text-sm sm:text-base truncate">{testimonial.name}</h3>
-                    <p className="text-xs sm:text-sm text-foreground/70 truncate">
-                      {testimonial.role} at {testimonial.company}
-                    </p>
-                  </div>
+                <div className="pt-3 sm:pt-4 border-t border-[var(--border-color)]">
+                  <h3 className="font-bold text-foreground text-sm sm:text-base">{testimonial.name}</h3>
+                  <p className="text-xs sm:text-sm text-foreground/70">
+                    {testimonial.role} at {testimonial.company}
+                  </p>
                 </div>
               </div>
             ))}
